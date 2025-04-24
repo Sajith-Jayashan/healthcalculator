@@ -20,7 +20,7 @@ const BloodSugarCalculator = () => {
       return;
     }
     
-    let category: string;
+    let category = '';
     switch(testType) {
       case 'fasting':
         category = getFastingBloodSugarCategory(level);
@@ -31,6 +31,8 @@ const BloodSugarCalculator = () => {
       case 'hba1c':
         category = getHbA1cCategory(level);
         break;
+      default:
+        category = 'Unknown test type';
     }
     
     setResult(`Your blood sugar level is classified as: ${category}`);
@@ -38,17 +40,49 @@ const BloodSugarCalculator = () => {
 
   return (
     <div className="bg-white p-6 rounded-lg shadow-md">
-      {/* ... other JSX ... */}
-      <select
-        value={testType}
-        onChange={(e) => setTestType(e.target.value as BloodSugarTestType)}
-        className="w-full p-2 border rounded"
+      <h2 className="text-2xl font-semibold mb-4">Blood Sugar Levels</h2>
+      
+      <div className="mb-4">
+        <label className="block mb-2">Test Type:</label>
+        <select
+          value={testType}
+          onChange={(e) => setTestType(e.target.value as BloodSugarTestType)}
+          className="w-full p-2 border rounded"
+        >
+          <option value="fasting">Fasting Blood Sugar</option>
+          <option value="postprandial">Postprandial (2 hours after eating)</option>
+          <option value="hba1c">HbA1c</option>
+        </select>
+      </div>
+      
+      <div className="mb-4">
+        <label className="block mb-2">
+          {testType === 'hba1c' ? 'HbA1c Level (%):' : 
+           testType === 'postprandial' ? 'Postprandial Level (mg/dL):' : 
+           'Fasting Level (mg/dL):'}
+        </label>
+        <input
+          type="number"
+          value={level || ''}
+          onChange={(e) => setLevel(parseFloat(e.target.value))}
+          className="w-full p-2 border rounded"
+          step={testType === 'hba1c' ? '0.1' : '1'}
+        />
+      </div>
+      
+      <button
+        onClick={handleCalculate}
+        className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
       >
-        <option value="fasting">Fasting Blood Sugar</option>
-        <option value="postprandial">Postprandial (2 hours after eating)</option>
-        <option value="hba1c">HbA1c</option>
-      </select>
-      {/* ... rest of component ... */}
+        Calculate
+      </button>
+      
+      {result && (
+        <div className="mt-4 p-4 bg-blue-50 rounded">
+          <h3 className="font-semibold">Result:</h3>
+          <p>{result}</p>
+        </div>
+      )}
     </div>
   );
 };
