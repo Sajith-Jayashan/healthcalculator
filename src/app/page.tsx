@@ -15,14 +15,14 @@ const HomePage = () => {
     {
       id: 'bp',
       title: 'Blood Pressure',
-      description: 'Check your BP classification',
+      description: 'Check your blood pressure here',
       icon: '❤️',
       component: <BloodPressureCalculator />
     },
     {
       id: 'sugar',
-      title: 'Blood Sugar',
-      description: 'Check your glucose levels',
+      title: 'Blood Sugar level',
+      description: 'Check your glucose levels in blood',
       icon: '🩸',
       component: <BloodSugarCalculator />
     },
@@ -76,7 +76,7 @@ const HomePage = () => {
               onClick={handleBackClick}
               className="mb-4 flex items-center text-blue-600 hover:text-blue-800"
             >
-              <span className="mr-1">←</span> Back to all calculators
+              <span className="mr-1">←</span> Back to Home 
             </button>
             
             {calculators.find(calc => calc.id === activeCalculator)?.component}
@@ -86,8 +86,8 @@ const HomePage = () => {
       
       <footer className="bg-gray-100 p-4 mt-8">
         <div className="container mx-auto text-center text-gray-600">
-          <p>Disclaimer: This tool provides general information only and is not a substitute for professional medical advice.</p>
-          <p className="mt-2">© {new Date().getFullYear()} Health Metrics Calculator</p>
+          <p>Disclaimer: not sutable for professional medical usage only for educational perpose.</p>
+          <p className="mt-2">© {new Date().getFullYear()} Health Metrics Calculator.</p>
         </div>
       </footer>
     </div>

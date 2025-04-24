@@ -35,7 +35,7 @@ const BloodSugarCalculator = () => {
         category = 'Unknown test type';
     }
     
-    setResult(`Your blood sugar level is classified as: ${category}`);
+    setResult(`Your blood sugar level is : ${category}`);
   };
 
   return (
