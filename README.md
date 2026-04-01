@@ -1,35 +1,34 @@
-Project Overview
-A Next.js web application that crete to calculates and help users to identify their medical condition . This includes Blood Pressure, Blood Sugar Analysis, BMI Calculator, Ideal Body Weight
-________________________________________
-Key Features
-1.	Four Health Calculators:
-o	Blood Pressure Classification: Categorizes readings (Normal, Elevated, Hypertension stages)
-o	Blood Sugar Analysis: Checks fasting, postprandial, and HbA1c levels
-o	BMI Calculator: Determines weight status (Underweight to Severe Obesity)
-o	Ideal Body Weight: Estimates healthy weight based on height/gender
-2.	User Experience:
-o	Clean, card-based interface
-o	Mobile-responsive design
-o	Instant results with medical classifications
-________________________________________
-Technology Stack
-Category	Technologies Used
-Framework	Next.js 14 (App Router)
-Language	TypeScript
-Styling	Tailwind CSS
-Deployment	Netlify (or Vercel)
-CI/CD	netlify
-Linting	ESLint + TypeScript
 
-Medical Logic Implemented
-•	Blood Pressure: Follows American Heart Association guidelines
-•	Blood Sugar: Uses ADA diabetes thresholds
-•	BMI: WHO classification standards
-•	IBW: Devine formula (medical standard)
-________________________________________
-Deployment Ready
-1.	One-Click Hosting: Pre-configured for Netlify
-2.	CI Pipeline:
-o	Automated linting checks
-o	Build verification
-o	Instant deployment on push
+# Simple Health checker
+
+A comprehensive health assessment tool built with **Next.js** and **Tailwind CSS**. Calculate and track key health metrics including BMI, blood pressure classification, blood sugar levels, and ideal body weight.
+
+![Health Checker Screenshot](public/screenshot.png) *Add a screenshot if available*
+
+---
+
+## Features
+
+- ** BMI Calculator** – Calculate Body Mass Index with weight status classification
+- ** Blood Pressure Classification** – Categorize BP readings (Normal, Elevated, Hypertension Stages 1-2, Hypertensive Crisis)
+- ** Blood Sugar Levels** – Assess fasting, post-meal, and HbA1c levels
+- ** Ideal Body Weight (IBW)** – Calculate healthy weight range based on gender and height
+- ** Responsive Design** – Works seamlessly on desktop, tablet, and mobile devices
+- ** Modern UI** – Clean interface with Tailwind CSS styling
+
+## Live Demo
+
+https://healthcalculatorwithsajith.netlify.app
+
+## Tech Stack
+
+- **Framework**: [Next.js 14+](https://nextjs.org/) (App Router)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Language**: TypeScript
+- **Fonts**: Geist (Google Fonts)
+- **Deployment**: Vercel / Netlify
+
+## Prerequisites
+
+- Node.js 18.17 or later
+- npm / yarn / pnpm
