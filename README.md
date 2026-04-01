@@ -3,10 +3,6 @@
 
 A comprehensive health assessment tool built with **Next.js** and **Tailwind CSS**. Calculate and track key health metrics including BMI, blood pressure classification, blood sugar levels, and ideal body weight.
 
-![Health Checker Screenshot](public/screenshot.png) *Add a screenshot if available*
-
----
-
 ## Features
 
 - ** BMI Calculator** – Calculate Body Mass Index with weight status classification
@@ -19,7 +15,7 @@ A comprehensive health assessment tool built with **Next.js** and **Tailwind CSS
 ## Live Demo
 
 https://healthcalculatorwithsajith.netlify.app
-
+**due to hosting error had to remove "styles" of the webpage**
 ## Tech Stack
 
 - **Framework**: [Next.js 14+](https://nextjs.org/) (App Router)
